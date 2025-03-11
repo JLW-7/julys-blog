@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<% 
+  // hasBanner: if there is banner to display
+  // showBanner: if the site vistor choose to display banner
+
+  let hasBanner;
+  if (theme.banner.enable && (is_home() || theme.banner.onAllPages)) {
+    if (is_post() && page.photos.length)
+      hasBanner = "desktop";      // hide banner for mobile view if the post has cover image
+    else
+      hasBanner = "true"
+  } else {
+    hasBanner = "false";
+  }
+%>
+<%  %>
+<html theme="dark" showBanner="true" hasBanner="<%- hasBanner %>" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="<%- url_for("/js/color.global.min.js") %>" ></script>
+<script src="<%- url_for("/js/load-settings.js") %>" ></script>
+<%- partial('_partial/head') %>
+<body>
+  <% if (theme.previewMode) { %>
+    <%- partial('_widget/color') %>
+  <% } %>
+  <% if (hasBanner != "false") { %>
+    <%- partial('_partial/banner') %> 
+  <% } %> 
+  <div id="main-grid" class="<% if (theme.sidebar.position == "right") { %> right-sidebar <% } %>  ">
+    <div id="nav" class="<% if (is_home()) { %> is_home <% } %>"  >
+      <%- partial('_partial/navbar', null, {cache: !config.relative_link}) %>
+    </div>
+    <div id="sidebar-wrapper">
+      <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+    </div>
+    <div id="content-body">
+      <%- body %>
+    </div>
+    <div id="footer-wrapper">
+      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    </div>
+    <%- partial('_partial/back-to-top') %>
+  </div>
+  <script src="<%- url_for("/js/light-dark-switch.js") %>"></script>
+</body>
+</html>

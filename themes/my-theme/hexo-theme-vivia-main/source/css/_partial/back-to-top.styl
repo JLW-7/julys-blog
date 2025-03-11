@@ -1,0 +1,30 @@
+.back-to-top-wrapper
+    width: 60px
+    height: 60px
+    position: absolute
+    right: 0
+    top: 0
+    @media mq-mobile
+        display: none
+    @media mq-tablet
+        display: none
+
+.back-to-top-btn
+    @extend $card-btn
+    width: 60px
+    height: 60px
+    font-family: font-icon
+    color: var(--card-btn-icon)
+    border: none
+    position: fixed
+    bottom: 240px
+    opacity: 1
+    transition: background trans-style, opacity trans-style, transform trans-style
+    cursor: pointer
+    transform: translate(80px)
+    i
+        font-size: 24px
+    &.hide
+        transform: translate(80px) scale(0.9)
+        opacity: 0
+        pointer-events: none
