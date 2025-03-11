@@ -23,18 +23,21 @@ hue: 250                         # The hue of the theme color (e.g. red: 0, oran
 
 # Personal info
 avatar:                             # Path to the avatar image relative to /source
-author: Your Name
-subtitle: This is the subtitle
+author: July Wu
+subtitle: 💻 Student Developer | 🏊 Swimming Athlete | 🪐 Astronomy Enthusiast | 🎧 Music Lover
 links:
-  - name: Twitter
-    icon: fa-brands fa-twitter      # Find icon codes at https://fontawesome.com/search
-    url: https://twitter.com
-  - name: Steam
-    icon: fa-brands fa-steam
-    url: https://store.steampowered.com
+  - name: Facebook
+    icon: fa-brands fa-facebook      # Find icon codes at https://fontawesome.com/search
+    url: https://www.facebook.com/profile.php?id=61572697954233
+  - name: Linkedin
+    icon: fa-brands fa-linkedin
+    url: https://www.linkedin.com/in/july-wu-85b3052a1/
   - name: GitHub
     icon: fa-brands fa-github
-    url: https://github.com
+    url: https://github.com/JLW-7
+  - name: Youtube
+    icon: fa-brands fa-youtube
+    url: https://www.youtube.com/@julywu7
 
 # Sidebar
 sidebar:
@@ -56,10 +59,10 @@ categories:
 # Third-party comment system
 comment:
   valine:
-    enable: false         # Enable Valine comment system
+    enable: false       # Enable Valine comment system
     appId: 
     appKey: 
-    placeholder: Just go go
+    placeholder: Better say something cool...
     pageSize: 10
     highlight: true
     serverURLs: 
