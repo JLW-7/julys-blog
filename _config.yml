@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
+title: July's Blog
+subtitle: 'July Wu'
+description: 'This is my blog, where I regularly make updates and write articles.'
+keywords: 
+author: July Wu
 language: en
 timezone: ''
 
@@ -102,3 +102,7 @@ theme: hexo-theme-vivia
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# Archive Generator
+archive_generator:
+  per_page: 0
