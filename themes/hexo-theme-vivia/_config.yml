@@ -12,17 +12,17 @@ favicon:                   # Path to the custom favicon relative to /source (e.g
 
 # Banner
 banner:
-  enable: true                   # Display banner
-  url: /astronomy-banner.jpg                          # Path to the banner image relative to /source. Web url is also supported
+  enable: true                  # Display banner
+  url: /sky-banner.jpg                          # Path to the banner image relative to /source. Web url is also supported
   position: center               # Specifies the alignment of the image, see the "object-position" property in CSS
-  onAllPages: true               # Display banner on all pages instead of only the home page
+  onAllPages: false               # Display banner on all pages instead of only the home page
 
 # Appearance
 hue: 250                         # The hue of the theme color (e.g. red: 0, orange: 60, blue: 260, purple: 300, pink: 345)
                                  # Visit `saicaca.github.io/vivia-preview` to preview the theme color
 
 # Personal info
-avatar:                             # Path to the avatar image relative to /source
+avatar: /julywu.jpg                            # Path to the avatar image relative to /source
 author: July Wu
 subtitle: 💻 Student Developer | 🏊 Swimming Athlete | 🪐 Astronomy Enthusiast | 🎧 Music Lover
 links:
@@ -41,7 +41,7 @@ links:
 
 # Sidebar
 sidebar:
-  widgets:                 # Plugins to be enabled (profile, category, tag, archive, recent_posts)
+  widgets:              # Plugins to be enabled (profile, category, tag, archive, recent_posts)
     normal:                # Scroll along with the page
       - profile
     sticky:                # Stick to the top of the page
@@ -81,5 +81,5 @@ comment:
 
 #Analytics
 gauges_analytics: false
-google_analytics: false #UA-xxxxxx
+google_analytics: true #UA-xxxxxx
 baidu_analytics: false # ddxxxxxxxxxxxxxxxxx In the https://hm.baidu.com/hm.js? Afterwards
